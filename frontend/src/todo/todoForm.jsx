@@ -18,8 +18,8 @@ class TodoForm extends Component {
 
     keyHandler(e) {
         const { add, clear, search, description } = this.props
-        if (e.key === 'Enter') {
-            e.shiftKey ? search() : add(description)
+        if (e.key === 'Enter') { // if press enter add text to task
+            e.shiftKey ? search() : add(description) // if press shift it searches the task
         } else if (e.key === 'Escape') {
             clear()
         }

@@ -28,6 +28,7 @@ export const markAsDone = (todo) => {
     return dispatch => {
         axios.put(`${URL}/${todo._id}`, { ...todo, done: true })
             .then(resp => dispatch(search()))
+
     }
 }
 
@@ -45,6 +46,6 @@ export const remove = (todo) => {
     }
 }
 
-export const clear = () => {
+export const clear = () => { //clear data from description
     return [{ type: 'TODO_CLEAR' }, search()]
 }
