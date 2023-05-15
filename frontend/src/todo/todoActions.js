@@ -47,5 +47,5 @@ export const remove = (todo) => {
 }
 
 export const clear = () => { //clear data from description
-    return [{ type: 'TODO_CLEAR' }, search()]
+    return [{ type: 'TODO_CLEAR' }, search()] // interprete ARRAY of actions
 }
